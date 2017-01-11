@@ -2,7 +2,7 @@ require 'uri'
 require 'json'
 require 'base64'
 require 'openssl'
-require 'rest_client'
+require 'rest-client'
 require 'securerandom'
 
 if OpenSSL::SSL::SSLContext::METHODS.include? :TLSv1_2
