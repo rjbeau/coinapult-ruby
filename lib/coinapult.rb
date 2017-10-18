@@ -242,16 +242,15 @@ proceeding with the account creation. #{result['info']}"
              to: nil, fro: nil, external_id: nil, txhash: nil,
              many: false, page: nil)
     url = '/api/t/search/'
-
     values = {}
     values['transaction_id'] = transaction_id unless transaction_id.nil?
     values['type'] = typ unless typ.nil?
-    values['currency'] = currency unless currency.nil
+    values['currency'] = currency unless currency.nil?
     values['to'] = to unless to.nil?
     values['from'] = fro unless fro.nil?
     values['extOID'] = external_id unless external_id.nil?
     values['txhash'] = txhash unless txhash.nil?
-    fail ArgumentError, 'no search parameters provided' if values.length == 0
+    # fail ArgumentError, 'no search parameters provided' if values.length == 0
     values['many'] = '1' if many
     values['page'] = page unless page.nil?
 
