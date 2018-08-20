@@ -5,12 +5,7 @@ require 'openssl'
 require 'rest-client'
 require 'securerandom'
 
-if OpenSSL::SSL::SSLContext::METHODS.include? :TLSv1_2
-  SSL_VERSION = :TLSv1_2
-else
-  SSL_VERSION = :TLSv1
-end
-
+SSL_VERSION = :TLSv1_2
 ECC_CURVE = 'secp256k1'
 ECC_COINAPULT_PUB = "
 -----BEGIN PUBLIC KEY-----
